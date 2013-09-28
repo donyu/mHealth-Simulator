@@ -5,6 +5,25 @@ body {
 	background-color: #fff;
 }
 
+.navbar-default .navbar-brand {
+  color: #fefefe;
+}
+
+.navbar {
+  background-color: #bc3d11;
+}
+
+.navbar-brand {
+	float: none;
+	display: inline-block;
+  font-size: 40px;
+  font-family: Helvetica;
+}
+
+#start-button {
+	width: 175px;
+}
+
 #embed-button {
 	width: 225px;
 	margin-top: 100px;
