@@ -21,7 +21,38 @@ body {
 }
 
 #start-button {
-	width: 175px;
+	width: 225px;
+	margin-bottom: 25px;
+}
+
+.text-sim {
+	margin-left: 15px;
+}
+
+.send {
+	border-left: 4px solid #f38787;
+}
+
+.send-again {
+	border-left: 4px solid #f38787;
+	margin-left: 50px;
+}
+
+.receive {
+	border-left: 4px solid #87D0F3;
+	margin-left: 25px;
+}
+
+.accordion-heading {
+	padding: 8px 15px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	border-radius: 5px;
+}
+
+.add {
+	float: right;
 }
 
 #embed-button {

@@ -1,6 +1,23 @@
-$('#textForm').submit(function(e) {
-	e.preventDefault();
-});
+function restartSMS()
+{	
+	var conversation = $('#conversation');
+	conversation.html('');
+
+	var date = new Date();
+	var newTime = $('<div class="time"><p>'+ getDate() + '</p></div>');
+	newTime.hide();	
+	conversation.append(newTime);
+
+	var initText = $('#initText').val();
+	var newText = $('<div class="text receive"><div class="reflect"></div><p>' + initText + '</p></div>');
+	newText.hide();
+	conversation.append(newText);
+
+	newText.show('normal');
+	newTime.show('fast');
+	scrollDown(conversation);
+	$('#imessage').val('');
+}
 
 function sendSMS()
 {
@@ -35,6 +52,38 @@ function sendText(text)
 	newTime.show('fast');
 	scrollDown(conversation);
 	$('#imessage').val('');
+
+	var yesReply = $('#yesReply').val();
+	var noReply = $('#noReply').val();
+	if (text == yesReply) {
+		var date = new Date();
+		var newTime = $('<div class="time"><p>'+ getDate() + '</p></div>');
+		newTime.hide();	
+		conversation.append(newTime);
+
+		var yesText = $('#yesText').val();
+		var newText = $('<div class="text receive"><div class="reflect"></div><p>' + yesText + '</p></div>');
+		newText.hide();
+		conversation.append(newText);
+
+		newText.show('normal');
+		newTime.show('fast');
+		scrollDown(conversation);
+	} else if (text == noReply) {
+		var date = new Date();
+		var newTime = $('<div class="time"><p>'+ getDate() + '</p></div>');
+		newTime.hide();	
+		conversation.append(newTime);
+
+		var noText = $('#noText').val();
+		var newText = $('<div class="text receive"><div class="reflect"></div><p>' + noText + '</p></div>');
+		newText.hide();
+		conversation.append(newText);
+
+		newText.show('normal');
+		newTime.show('fast');
+		scrollDown(conversation);
+	}
 }
  
 function receiveText(smsText)
